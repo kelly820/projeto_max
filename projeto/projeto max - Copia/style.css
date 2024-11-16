@@ -1,0 +1,424 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding:0;
+    box-sizing:border-box;
+    margin:0;
+}
+:root{
+    --base-color:#000000;
+    --second-color:#D6C0B3;
+    --decoration-color:#3C552D;
+    --buttons-color:rgba(168, 210, 153, 0.59)bf;
+    --footer-color:#31511E;
+    --nav-color:#003C43;
+    --cor:#009688;
+    --text-color:rgb(0, 0, 0);
+
+}
+
+/* terminar estilos e add conteúdo do produto */
+
+
+
+body{
+    color:var(--text-color);
+    background-color: var(--base-color);
+    margin: 0;
+    padding: 0;
+}
+
+main .background_anime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    border-radius: 8%;
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/originals/db/17/d9/db17d9fcbbbf858093cfa60503f095a1.gif'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #ffffff;
+    flex-direction: column;
+}
+
+
+nav{
+    backdrop-filter:blur(22px);
+    top: 0;
+    width: 100%;
+    
+    position: fixed;
+    box-shadow: 3px 3px 5px rgb(0,0,0, 0.1);
+
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+    list-style: none;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    font-size: 22px;
+    font-family: Poppins;
+    font-weight: 300;
+    margin-left: -10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    transform: color 2s;
+}
+
+nav a:hover {
+    
+    border: 1px solid #ffffff5b;
+    border-radius: 30px;
+    color:white;
+  }
+ 
+
+
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #00000071;
+    backdrop-filter: blur(100px);
+    box-shadow: 3px 3px 5px rgb(0,0,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.conteiner{
+    display:flex;
+    gap: 100px 80px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+
+}
+
+.conteiner .card{
+    position:relative;
+    width:750px;
+    margin: 50px;
+    display:flex;
+    color:black;
+    justify-content:center;
+    align-items:flex-start;
+    border-radius:30px;
+    box-shadow:0 35px 80px rgb(0, 0, 0 ,.15) ;
+    height:500px;
+    background-color:#fff;
+    transition:.5s;
+}
+.conteiner .card:hover{
+    height:400px
+}
+
+.conteiner .card .caixaImg{
+    position:absolute;
+    top:20px;
+    width:400px;
+    height:320px;
+    border-radius:30px;
+    overflow:hidden;/*esconde oq sobrar da imagem*/
+    background-color:black;
+}
+
+.conteiner .card .caixaImg img{
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius:30px;
+    filter:blur(0);
+    width:100%;
+    height:100%;/*cobre todo o elemento imagem*/
+    object-fit:cover;/*cobre o elemento pai*/
+
+}
+
+.conteiner .card:hover .caixaImg{
+    top:-100px;
+    scale:.75; 
+    box-shadow:0 15px 45px rgba(0,0,0,.2);
+}
+
+.conteiner .card .conteudo{
+    position:absolute;
+    margin-top:250px;
+    width:100%;
+    height:35px;
+    color:black;
+    padding:0 30px;
+    overflow:hidden;
+    text-align:center;
+    transition:.5s;
+}
+.conteiner .card:hover .conteudo{
+    top:-20px;
+    height:250px;
+}
+
+
+
+.conteiner .card .conteudo h2{
+    font-size:1.8rem;
+    font-weight:300px;
+    font-family:Poppins;
+    line-height:3rem;
+    color:var(--cor);
+
+}
+
+.conteiner .card .conteudo p{
+    color:#000000;
+    font-size:14px;
+    font-family:Poppins;
+    font-weight:400;
+}
+
+.conteiner .card .conteudo a{
+    display:inline-block;
+    margin-top:15px;
+    background:var(--cor);
+    padding:10px 20px;
+    font-weight:500px;
+    font-family:Poppins;
+    border-radius:30px;
+    text-decoration:none;
+    transform:color 2s;
+}
+.conteiner .card .conteudo a:hover{
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    color:white;
+  }
+  
+.sidebar li{
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+
+}
+.menu-button{
+    display: none;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    background: white;
+    padding: 20px 50px;
+    display: flex-end;
+    margin-top: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.effect h3{
+    filter:blur(0);
+    z-index:999;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaçamento uniforme entre os elementos */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o padding padrão */
+    list-style: none; /* Remove as bolinhas da lista */
+    flex-wrap: wrap; /* Permite que os itens da lista quebrem em linhas */
+}
+
+.menu-elem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon svg {
+    font-size: 32px;
+    margin-bottom: 5px; /* Espaço entre o ícone e o texto */
+    color: black;
+    transition: transform 0.5s;
+}
+
+.icon:hover svg {
+    transform: translateY(-5px);
+}
+
+.icon {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.background_anime h1{
+    color:var(--text-color);
+    font-family:Poppins;
+    font-weight:400;
+    font-size:55px;
+}
+.background_anime p{
+    color:var(--text-color);
+    font-family:Poppins;
+    font-weight:200;
+    font-size:25px;
+    margin:30px;
+
+}
+
+.menu-elem p {
+    color:#000000;
+    font-size: 15px;
+    font-family: Poppins;
+    font-weight:300;
+}
+.menu-elem span{
+    color:#000000;
+    font-size: 15px;
+    font-family: Poppins;
+    font-weight:300;
+    font-style: bold;
+}
+
+
+
+
+
+@media(max-width:800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .conteiner .card:hover .conteudo{
+        top:-70px;
+        height:250px;
+     
+    }
+    .background_anime h1{
+        color:var(--text-color);
+        font-family:Poppins;
+        font-weight:400;
+        margin: 20px;
+        font-size:20px;
+    }
+    .background_anime p{
+        color:var(--text-color);
+        font-family:Poppins;
+        font-weight:200;
+        font-size:12px;
+        margin:30px;
+    
+    }
+    .conteiner .card .caixaImg{
+        position:absolute;
+        top:20px;
+        width:300px;
+        height:220px;
+        border-radius:30px;
+        overflow:hidden;/*esconde oq sobrar da imagem*/
+        background-color:black;
+    }
+    .conteiner .card{
+        position:relative;
+        width:550px;
+        margin: 50px;
+        display:flex;
+        color:black;
+        justify-content:center;
+        align-items:flex-start;
+        border-radius:30px;
+        box-shadow:0 35px 80px rgb(0, 0, 0 ,.15) ;
+        height:500px;
+        background-color:#fff;
+        transition:.5s;
+    }
+    .conteiner .card:hover{
+        height:500px
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+
+    }
+    
+    .conteiner .card .caixaImg{
+        position:absolute;
+        top:20px;
+        width:400px;
+        height:220px;
+        border-radius:30px;
+        overflow:hidden;/*esconde oq sobrar da imagem*/
+        background-color:black;
+    }
+    .conteiner .card{
+        position:relative;
+        width:450px;
+        margin: 50px;
+        display:flex;
+        color:black;
+        justify-content:center;
+        align-items:flex-start;
+        border-radius:30px;
+        box-shadow:0 35px 80px rgb(0, 0, 0 ,.15) ;
+        height:500px;
+        background-color:#fff;
+        transition:.5s;
+    }
+    .conteiner .card:hover{
+        height:500px
+    }
+    
+    .footer{
+        width:100%;
+    }
+
+}
+
+
+
+/* arrumar espaçamento entre os dois cards no mobile  *
+/* arrumar o segundo projeto e terminar django auth */
+/* fazer o chatbot para este projeto */
